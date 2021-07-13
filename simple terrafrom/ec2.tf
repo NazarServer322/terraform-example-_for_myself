@@ -10,7 +10,7 @@ resource "aws_instance" "Terraform_Instance" {
   vpc_security_group_ids = ["sg-0446a23868282b71f"]
   key_name               = "KeyImportant"
   user_data              = file("scritp.sh") 
-  
+  instance_type          = "t3.micro"       
 
   tags = {
     Name    = "Terraform"
